@@ -4,7 +4,7 @@ using Redmine.Net.Api;
 using Redmine.Net.Api.Types;
 using System.Collections.Specialized;
 
-namespace WebApplication1.Pages
+namespace redmine_dashboard.Pages
 {
     public class IndexModel : PageModel
     {
