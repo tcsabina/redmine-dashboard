@@ -22,7 +22,7 @@ namespace WebApplication1.Pages
 
             foreach (var issue in manager.GetObjects<Issue>(parameters))
             {
-                IssueDetails.Add($"#{issue.Id} | {issue.Status.Name} - {issue.Subject}");
+                IssueDetails.Add($"#{issue.Id} | {issue.Status.Name} | {issue.Subject}");
             }
         }
     }

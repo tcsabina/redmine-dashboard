@@ -8,15 +8,48 @@
 <html>
 <head>
     <title>Redmine Issues</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        th, td {
+            padding: 8px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+    </style>
 </head>
 <body>
     <h1>Redmine Issues</h1>
-
+@*
     <ul>
         @foreach (var issueDetail in Model.IssueDetails)
         {
             <li>@issueDetail</li>
         }
     </ul>
+*@
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Issue ID</th>
+                <th>Status</th>
+                <th>Subject</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var issueDetail in Model.IssueDetails)
+            {
+                var details = issueDetail.Split('|');
+                    <tr>
+                        <td>@details[0]</td>
+                        <td>@details[1]</td>
+                        <td>@details[2]</td>
+                    </tr>
+            }
+        </tbody>
+    </table>
 </body>
 </html>
