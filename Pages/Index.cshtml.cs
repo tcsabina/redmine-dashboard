@@ -12,7 +12,7 @@ namespace redmine_dashboard.Pages
 
         public void OnGet()
         {
-            string host = "http://127.0.0.1/";
+            string host = "http://redmine-service:3000";
             string apiKey = "8c2c0c5e67d6c424d6aa02ead559392d7570d2d7";
             IssueDetails = new List<string>();
 
